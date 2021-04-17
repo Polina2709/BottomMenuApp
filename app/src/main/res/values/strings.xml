@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Bottom Menu App</string>
+    <string name="title_search">Поиск событий</string>
+    <string name="title_map">Карта событий</string>
+    <string name="title_eventCreating">Создание событий</string>
+    <string name="title_notifications">Уведомления</string>
+    <string name="title_profile">Профиль</string>
+</resources>
