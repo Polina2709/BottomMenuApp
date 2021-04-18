@@ -10,4 +10,6 @@
     <color name="blue_navigation">#90D0E4</color>
     <color name="navigation_on">#80C2E7</color>
     <color name="navigation_off">#CED9E0</color>
+    <color name="blue_inCreating">#75B4EC</color>
+    <color name="gray_text">#6F7275</color>
 </resources>

@@ -10,5 +10,15 @@
     <string name="EventPlaceTitle">Место</string>
     <string name="EventTimeTitle">Время</string>
     <string name="hintEventName_cinema">Пойти в кино</string>
+    <string name="Morning">Утро</string>
+    <string name="Day">День</string>
+    <string name="Evening">Вечер</string>
+    <string name="Night">Ночь</string>
+    <string name="EventParticipantsCountTitle">Количество участников</string>
+    <string name="GenderTitle">Пол участников</string>
+    <string name="GenderMale">Мужской</string>
+    <string name="GenderFemale">Женский</string>
+    <string name="GenderAny">Любой</string>
+    <string name="EventDetails">Детали события</string>
 
 </resources>
