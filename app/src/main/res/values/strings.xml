@@ -5,4 +5,6 @@
     <string name="title_eventCreating">Создание событий</string>
     <string name="title_notifications">Уведомления</string>
     <string name="title_profile">Профиль</string>
+    <string name="EventName">Название события</string>
+
 </resources>
