@@ -9,17 +9,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ConstLayout_creating"
         android:layout_width="match_parent"
-        android:layout_height="720dp"
-        android:background="#F9FBFD">
+        android:layout_height="match_parent"
+        android:background="#F7FAFD">
 
-
+<!--Название события-->
         <TextView
             android:id="@+id/textViewEventName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Название события"
+            android:layout_marginTop="12dp"
+            android:text="@string/EventName"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -42,40 +42,57 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewEventName">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditTextEventRegion"
+                android:id="@+id/textInputEditTextEventName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Пойти в кино" />
+                android:hint="@string/hintEventName_cinema" />
         </com.google.android.material.textfield.TextInputLayout>
 
+<!-- Место события-->
         <TextView
             android:id="@+id/textViewEventRegion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="В каком районе"
+            android:text="@string/EventPlaceTitle"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayoutEventName"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textViewEventName"
-            app:layout_constraintTop_toBottomOf="@+id/textViewEventName" />
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEventName" />
 
-        <Spinner
-            android:id="@+id/spinnerRegion"
-            style="@style/Widget.AppCompat.Spinner.DropDown"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutEventPlace"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="32dp"
-            android:backgroundTint="#1ACC21"
-            android:foregroundTint="#E81515"
-            android:spinnerMode="dropdown"
-            android:visibility="visible"
+            app:boxStrokeColor="#71C0FF"
+            app:errorEnabled="true"
+            app:hintEnabled="false"
             app:layout_constraintEnd_toEndOf="@+id/textViewEventRegion"
-            app:layout_constraintHorizontal_bias="0.051"
             app:layout_constraintStart_toStartOf="@+id/textViewEventRegion"
-            app:layout_constraintTop_toBottomOf="@+id/textViewEventRegion" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewEventRegion">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextEventRegion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Заменить подсказку для места" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!-- Дата события-->
+        <TextView
+            android:id="@+id/textViewEventDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/EventDateTitle"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewEventRegion"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewEventRegion"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEventPlace" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutEventDate"
@@ -95,23 +112,24 @@
 
             <EditText
                 android:id="@+id/eventDate"
-                android:layout_width="356dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="10.04.2021 (Сделать DatePicker, чтобы дата была в нужном формате + проверка на то, что дата не в прошлом/ Либо просто сделать проверку на введенный формат и то, что не в прошлом)"
                 android:inputType="date" />
         </com.google.android.material.textfield.TextInputLayout>
 
+<!-- Время события-->
         <TextView
-            android:id="@+id/textViewEventDate"
+            android:id="@+id/textViewEventTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
-            android:text="Когда"
+            android:text="@string/EventTimeTitle"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/textViewEventRegion"
+            app:layout_constraintEnd_toEndOf="@+id/textViewEventDate"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textViewEventRegion"
-            app:layout_constraintTop_toBottomOf="@+id/textViewEventRegion" />
+            app:layout_constraintStart_toStartOf="@+id/textViewEventDate"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEventDate" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

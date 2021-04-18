@@ -6,5 +6,9 @@
     <string name="title_notifications">Уведомления</string>
     <string name="title_profile">Профиль</string>
     <string name="EventName">Название события</string>
+    <string name="EventDateTitle">Дата</string>
+    <string name="EventPlaceTitle">Место</string>
+    <string name="EventTimeTitle">Время</string>
+    <string name="hintEventName_cinema">Пойти в кино</string>
 
 </resources>
