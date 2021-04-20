@@ -10,7 +10,7 @@
         android:id="@+id/ConstLayout_creating"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#317A7A7A">
+        android:background="#31FFFFFF">
 
 <!--Название события-->
         <TextView
@@ -296,49 +296,62 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/RadioBtTimeMorning"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/radio_selector"
                     android:button="@android:color/transparent"
-                    android:paddingHorizontal="@dimen/text_margin"
                     android:text="@string/Morning"
                     android:textAlignment="center"
                     android:textColor="@drawable/radio_text_event_time" />
 
                 <RadioButton
+                    android:id="@+id/RadioBtTimeDay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/radio_selector"
                     android:button="@android:color/transparent"
-                    android:paddingHorizontal="@dimen/text_margin"
                     android:text="@string/Day"
                     android:textAlignment="center"
                     android:textColor="@drawable/radio_text_event_time" />
 
                 <RadioButton
+                    android:id="@+id/RadioBtTimeEvening"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/radio_selector"
                     android:button="@android:color/transparent"
-                    android:paddingHorizontal="@dimen/text_margin"
                     android:text="@string/Evening"
                     android:textAlignment="center"
                     android:textColor="@drawable/radio_text_event_time" />
 
                 <RadioButton
+                    android:id="@+id/RadioBtTimeNight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:text="@string/Night"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_text_event_time" />
+
+                <RadioButton
+                    android:id="@+id/RadioBtTimeAny"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/radio_selector"
                     android:button="@android:color/transparent"
-                    android:paddingHorizontal="@dimen/text_margin"
-                    android:text="@string/Night"
+                    android:checked="true"
+                    android:text="@string/TimeAny"
                     android:textAlignment="center"
                     android:textColor="@drawable/radio_text_event_time" />
             </RadioGroup>
@@ -387,30 +400,31 @@
             tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutEventParticipantsCount"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginStart="12dp"
-            app:boxStrokeColor="@color/blue_inCreating"
-            app:errorEnabled="true"
-            app:hintEnabled="false"
-            app:layout_constraintCircleRadius="6dp"
-            app:layout_constraintStart_toEndOf="@+id/switchEventParticipantsCount"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout_Radio_EventTime">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEventParticipantsCount"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:visibility="invisible"
+                app:boxStrokeColor="@color/blue_inCreating"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintCircleRadius="6dp"
+                app:layout_constraintStart_toEndOf="@+id/switchEventParticipantsCount"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_Radio_EventTime">
 
-            <!--вот тут добавить visibility gone, а в коде изменить видимость, если switch включен-->
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditTextEventParticipantsCount"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="1"
-                android:inputType="number"
-                android:padding="0dp"
-                android:textSize="12sp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                <!--вот тут добавить visibility gone, а в коде изменить видимость, если switch включен-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextEventParticipantsCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="1"
+                    android:inputType="number"
+                    android:padding="0dp"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
 <!-- Пол участников-->
@@ -480,7 +494,8 @@
                     android:paddingHorizontal="@dimen/text_margin"
                     android:text="@string/GenderAny"
                     android:textAlignment="center"
-                    android:textColor="@drawable/radio_text_event_time" />
+                    android:textColor="@drawable/radio_text_event_time"
+                    android:checked="true"/>
 
             </RadioGroup>
         </LinearLayout>
@@ -538,15 +553,7 @@
 
         </Button>
         </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp"
-                android:layout_marginTop="6dp"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout_ButtonNext"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout_ButtonNext"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout_ButtonNext">
 
-            </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

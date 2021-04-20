@@ -21,5 +21,6 @@
     <string name="GenderAny">Любой</string>
     <string name="EventDetails">Детали события</string>
     <string name="EventCategoryTitle">Категория</string>
+    <string name="TimeAny">Любое</string>
 
 </resources>
