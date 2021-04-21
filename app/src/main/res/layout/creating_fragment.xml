@@ -83,6 +83,7 @@
                     android:layout_weight="1"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/RadioBtCategory_Walk"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -94,6 +95,7 @@
                         android:textColor="@drawable/radio_text_event_time" />
 
                     <RadioButton
+                        android:id="@+id/RadioBtCategory_Active"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -105,6 +107,7 @@
                         android:textColor="@drawable/radio_text_event_time" />
 
                     <RadioButton
+                        android:id="@+id/RadioBtCategory_Food"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -125,6 +128,7 @@
                     android:layout_weight="1"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/RadioBtCategory_Culture"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -135,6 +139,7 @@
                         android:textAlignment="center"
                         android:textColor="@drawable/radio_text_event_time" />
                     <RadioButton
+                        android:id="@+id/RadioBtCategory_Travel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -145,6 +150,7 @@
                         android:textAlignment="center"
                         android:textColor="@drawable/radio_text_event_time" />
                     <RadioButton
+                        android:id="@+id/RadioBtCategory_Concerts"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -167,6 +173,7 @@
 
 
                     <RadioButton
+                        android:id="@+id/RadioBtCategory_Study"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -178,6 +185,7 @@
                         android:textColor="@drawable/radio_text_event_time" />
 
                     <RadioButton
+                        android:id="@+id/RadioBtCategory_Other"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -461,6 +469,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/RadioBtGenderMale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
@@ -473,6 +482,7 @@
                     android:textColor="@drawable/radio_text_event_time" />
 
                 <RadioButton
+                    android:id="@+id/RadioBtGenderFemale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
@@ -485,16 +495,17 @@
                     android:textColor="@drawable/radio_text_event_time" />
 
                 <RadioButton
+                    android:id="@+id/RadioBtGenderAny"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/radio_selector"
-                    android:button="@android:color/transparent"
                     android:paddingHorizontal="@dimen/text_margin"
                     android:text="@string/GenderAny"
                     android:textAlignment="center"
                     android:textColor="@drawable/radio_text_event_time"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
                     android:checked="true"/>
 
             </RadioGroup>
@@ -552,6 +563,13 @@
             android:background="@drawable/button_next">
 
         </Button>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout_ButtonNext"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_ButtonNext"
+            android:layout_marginTop="10dp">
         </LinearLayout>
 
 
