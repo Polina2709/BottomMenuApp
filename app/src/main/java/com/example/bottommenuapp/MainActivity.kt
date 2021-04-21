@@ -1,12 +1,19 @@
 package com.example.bottommenuapp
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.bottommenuapp.ui.inviting.InvitingFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,5 +33,14 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_profile))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
     }
+
+//    fun goToInvitations (view: View) {
+//        val btNext = view.findViewById<Button>(R.id.bt_next)
+//        btNext.setOnClickListener {
+//            supportFragmentManager.beginTransaction().replace(R.id.frame_fragment_id, InvitingFragment()).addToBackStack(null).commit()
+//        }
+//    }
 }

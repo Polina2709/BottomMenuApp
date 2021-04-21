@@ -1,5 +1,6 @@
 package com.example.bottommenuapp.ui.creating
 
+import android.app.Activity
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -35,19 +36,29 @@ class Creating : Fragment() {
         // TODO: Use the ViewModel
 
 
+
         // возможно, нужно очищать поле или при мапинге в бд смотреть на состояние свитч
-        view?.findViewById<Switch>(R.id.switchEventParticipantsCount)?.setOnCheckedChangeListener { _, isChecked ->
-            view?.findViewById<TextInputLayout>(R.id.textInputLayoutEventParticipantsCount)?.visibility = if (isChecked) View.VISIBLE
-            else
-                View.INVISIBLE
+        view?.let { switchParticipantsCountVisibility(it) }
+
+
     }
 
-//    fun switchParticipantsCountVisibility (view: View) {
-//        val switchParticipantCount = view.findViewById<Switch>(R.id.switchEventParticipantsCount)
-//        switchParticipantCount.setOnCheckedChangeListener { _, isChecked ->
-//            view.findViewById<TextInputLayout>(R.id.textInputLayoutEventParticipantsCount).visibility = if (isChecked) View.VISIBLE
-//            else View.GONE
-//        }
+
+//    fun goToInvitations (view: View) {
+//        val btNext = view.findViewById<Button>(R.id.bt_next)
+//        btNext.setOnClickListener {
+//                requireActivity().supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment, InvitingFragment()).addToBackStack(null).commit()
+//            }
+//    }
+
+
+
+
+    private fun switchParticipantsCountVisibility (view: View) {
+        view.findViewById<Switch>(R.id.switchEventParticipantsCount).setOnCheckedChangeListener { _, isChecked ->
+            view.findViewById<TextInputLayout>(R.id.textInputLayoutEventParticipantsCount).visibility = if (isChecked) View.VISIBLE
+            else View.GONE
+        }
     }
 
 }
