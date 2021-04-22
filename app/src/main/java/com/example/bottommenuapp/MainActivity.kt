@@ -2,6 +2,7 @@ package com.example.bottommenuapp
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Adapter
 import android.widget.Button
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.bottommenuapp.ui.events.MyEventRecyclerViewAdapter
 import com.example.bottommenuapp.ui.inviting.InvitingFragment
 
 class MainActivity : AppCompatActivity() {
@@ -36,6 +38,15 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+//    private lateinit var  MyEventRecyclerViewAdapter : MyEventRecyclerViewAdapter
+//
+//    private fun initRecycler() {
+//        MyEventRecyclerViewAdapter = MyEventRecyclerViewAdapter(eventList = )
+//
+//        with() {
+//
+//        }
+//    }
 
 //    fun goToInvitations (view: View) {
 //        val btNext = view.findViewById<Button>(R.id.bt_next)

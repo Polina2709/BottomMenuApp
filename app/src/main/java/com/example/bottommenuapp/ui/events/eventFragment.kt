@@ -14,7 +14,7 @@ import com.example.bottommenuapp.dummy.DummyContent
 /**
  * A fragment representing a list of Items.
  */
-class eventFragment : Fragment() {
+class EventFragment : Fragment() {
 
     private var columnCount = 1
 
@@ -30,7 +30,7 @@ class eventFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_event_list, container, false)
+        val view = inflater.inflate(R.layout.event_list_fragment, container, false)
 
         // Set the adapter
         if (view is RecyclerView) {
@@ -39,7 +39,7 @@ class eventFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyeventRecyclerViewAdapter(DummyContent.ITEMS)
+ //               adapter = MyEventRecyclerViewAdapter(EventContent.ITEMS)
             }
         }
         return view
@@ -53,7 +53,7 @@ class eventFragment : Fragment() {
         // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
-            eventFragment().apply {
+            EventFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_COLUMN_COUNT, columnCount)
                 }

@@ -9,7 +9,7 @@
         android:id="@+id/navigation_search"
         android:name="com.example.bottommenuapp.ui.events.eventFragment"
         android:label="Поиск событий"
-        tools:layout="@layout/fragment_event_list" />
+        tools:layout="@layout/event_list_fragment" />
     <fragment
         android:id="@+id/navigation_mapsFragment"
         android:name="com.example.bottommenuapp.ui.map.MapsFragment"
