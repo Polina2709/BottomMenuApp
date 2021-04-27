@@ -14,8 +14,15 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bottommenuapp.ui.events.MyEventRecyclerViewAdapter
 import com.example.bottommenuapp.ui.inviting.InvitingFragment
+import kotlinx.android.synthetic.main.event_list_fragment.*
+import java.util.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,17 +43,28 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-
+        initRecyclerView()
     }
-//    private lateinit var  MyEventRecyclerViewAdapter : MyEventRecyclerViewAdapter
+
+    lateinit var  MyEventRecyclerViewAdapter : MyEventRecyclerViewAdapter
+
+    private fun initRecyclerView() {
+        MyEventRecyclerViewAdapter = MyEventRecyclerViewAdapter()
+
+        with(eventListId) {
+            this.layoutManager = LinearLayoutManager(context)
+            this.adapter = MyEventRecyclerViewAdapter
+            this.setHasFixedSize(true)
+        }
+    }
+//    private val random: Int
+//        get() = Random().nextInt(9)
 //
-//    private fun initRecycler() {
-//        MyEventRecyclerViewAdapter = MyEventRecyclerViewAdapter(eventList = )
+//    private fun getRandomName() = resources.getStringArray(R.array.names)[random]
 //
-//        with() {
+//    private fun getRandomDescription() = resources.getStringArray(R.array.dates)[random]
 //
-//        }
-//    }
+//    private fun getRandomAvatarUrl() = "https://i.pravatar.cc/150?img=$random"
 
 //    fun goToInvitations (view: View) {
 //        val btNext = view.findViewById<Button>(R.id.bt_next)
