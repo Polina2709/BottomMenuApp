@@ -4,6 +4,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.bottommenuapp.R
@@ -15,7 +16,7 @@ import com.example.bottommenuapp.dummy.DummyContent.DummyItem
  * [RecyclerView.Adapter] that can display a [DummyItem].
  * TODO: Replace the implementation with code for your data type.
  */
-class MyEventRecyclerViewAdapter : RecyclerView.Adapter<EventViewHolder>() {
+class MyEventRecyclerViewAdapter() : RecyclerView.Adapter<EventViewHolder>() {
  //   private val eventList: List<Event>)
 
     private val eventList = mutableListOf<EventContent.Event>()
@@ -35,6 +36,12 @@ class MyEventRecyclerViewAdapter : RecyclerView.Adapter<EventViewHolder>() {
     }
 
     override fun getItemCount(): Int = eventList.size
+
+    fun setEvent(events: List<EventContent.Event>) {
+        eventList.clear()
+        eventList.addAll(events)
+        notifyDataSetChanged()
+    }
 
 //    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 //

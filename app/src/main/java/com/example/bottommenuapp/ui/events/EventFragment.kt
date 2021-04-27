@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.bottommenuapp.R
 import com.example.bottommenuapp.dummy.DummyContent
+import com.example.bottommenuapp.dummy.DummyContent.ITEMS
 
 /**
  * A fragment representing a list of Items.
@@ -39,7 +40,8 @@ class EventFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
- //               adapter = MyEventRecyclerViewAdapter(EventContent.ITEMS)
+                // вот тут я так понимаю отображение, но пока все ломается
+            //    adapter = MyEventRecyclerViewAdapter(EventContent.ITEMS)
             }
         }
         return view
